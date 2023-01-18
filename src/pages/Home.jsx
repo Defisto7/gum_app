@@ -6,20 +6,20 @@ import Exercises from "../components/Exercises";
 
 const Home = () => {
   const [bodyPart, setBodyPart] = useState("all");
-  const [exercise, setExercise] = useState([]);
+  const [exercises, setExercises] = useState([]);
 
   return (
     <Box>
       <HeroBanner />
       <SearchExercises
-        setExercise={setExercise}
+        setExercises={setExercises}
         bodyPart={bodyPart}
         setBodyPart={setBodyPart}
       />
       <Exercises
-        setExercise={setExercise}
+        exercises={exercises}
         bodyPart={bodyPart}
-        setBodyPart={setBodyPart}
+        setExercises={setExercises}
       />
     </Box>
   );
